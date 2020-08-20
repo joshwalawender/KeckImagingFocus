@@ -203,23 +203,11 @@ if __name__ == '__main__':
     inst = header.get('INSTRUME')
     log.info(f'Found INSTRUME: {inst}')
     if re.match('^LRISBLUE', inst):
-        minflux=10000
-        extract_thresh=5
-        minarea=4
         focuskeyword='BLUFOCUS'
-        ccdnamekeyword='CCDNAME'
     elif re.match('^LRIS$', inst):
-        minflux=10000
-        extract_thresh=5
-        minarea=4
         focuskeyword='REDFOCUS'
-        ccdnamekeyword='CCDNAME'
     elif re.match('^DEIMOS', inst):
-        minflux=10000
-        extract_thresh=5
-        minarea=4
         focuskeyword='DWFOCVAL'
-        ccdnamekeyword='CCDNAME'
 
     analyze_focus_run(inputfiles, minflux=minflux, minarea=minarea,
                       extract_thresh=extract_thresh, 
