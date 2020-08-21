@@ -209,9 +209,8 @@ if __name__ == '__main__':
     elif re.match('^DEIMOS', inst):
         focuskeyword='DWFOCVAL'
 
-    analyze_focus_run(inputfiles, minflux=minflux, minarea=minarea,
-                      extract_thresh=extract_thresh, 
-                      focuskeyword=focuskeyword, ccdnamekeyword=ccdnamekeyword)
+    analyze_focus_run(inputfiles,
+                      focuskeyword=focuskeyword)
 
 # Example Calls
 # python ImagingFocus.py ~/OneDrive\ -\ keck.hawaii.edu/InstrumentFocus/LRIS/2020aug18_B/bfoc000[1-7].fits
